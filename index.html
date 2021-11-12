@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intercom Front</title>
+    <link rel="stylesheet" href="./dist/lib/material/css/material.css">
+    <link rel="stylesheet" href="./dist/lib/material/css/material.css.map">
+    <link rel="stylesheet" href="./dist/lib/material/css/material.css.map">
+    <link rel="stylesheet" href="./dist/lib/material/css/material.min.css.map">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="bg-primary">
+
+    <div class="container p-5">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title"> Nueva Nota</h2>
+                </div>
+                <div class="card-body" id="form">
+                    <form onsubmit="enviar(event)">
+                        <div class="form-group row">
+                            <label for="name" class="col-sm-2 col-form-label col-form-label-sm">Nombre</label>
+                            <div class="col-sm-10">
+                              <input type="text" required name="nombre" class="form-control form-control-sm" id="nombre" placeholder="Nombre del estudiante">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="nota1" class="col-sm-2 col-form-label col-form-label-sm">Nota 1</label>
+                            <div class="col-sm-10">
+                              <input type="number" required name="note1" class="form-control form-control-sm" id="note1" placeholder="Nota 1">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="nota2" class="col-sm-2 col-form-label col-form-label-sm">Nota 2</label>
+                            <div class="col-sm-10">
+                              <input type="number" required name="note2" class="form-control form-control-sm" id="note2" placeholder="Nota 2">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="nota3" class="col-sm-2 col-form-label col-form-label-sm">Nota 3</label>
+                            <div class="col-sm-10">
+                              <input type="number"required name="note3" class="form-control form-control-sm" id="note3" placeholder="Nota 3">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="nota4" class="col-sm-2 col-form-label col-form-label-sm">Nota 4</label>
+                            <div class="col-sm-10">
+                              <input type="number" required name="note4" class="form-control form-control-sm" id="note4" placeholder="Nota 4">
+                            </div>
+                        </div>
+                        <input type="submit" value="ENVIAR" class="btn btn-primary btn-lg btn-right float-right right">
+                    </form>
+                </div>
+            </div>
+
+            <div class="card mt-2">
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">nombre</th>
+                            <th scope="col">note 1</th>
+                            <th scope="col">note 2</th>
+                            <th scope="col">note 3</th>
+                            <th scope="col">note 4</th>
+                            <th scope="col">promedio</th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody id="table">
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js" integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./dist/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Then Material JavaScript on top of Bootstrap JavaScript -->
+    <script src="dist/lib/material/js/material.js"></script>
+    <script src="./dist/form.js"></script>
+</body>
+</html>
